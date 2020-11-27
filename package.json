@@ -1,0 +1,13 @@
+{
+    "name": "@kahi-ui/svelte",
+    "description": "Straight-forward Bindings for Kahi UI",
+    "author": "novacbn",
+    "version": "0.0.1",
+    "main": "src/index.js",
+    "devDependencies": {
+        "prettier": "^2.1.2"
+    },
+    "dependencies": {
+        "svelte": "^3.29.7"
+    }
+}
