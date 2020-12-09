@@ -1,6 +1,6 @@
 export * from "./util/enumerations";
 
-// export * as Badge from "./components/badge";
+export {Badge} from "./components/badge";
 export {Button} from "./components/button";
 export {Divider} from "./components/divider";
 // export * as Loader from "./components/loader";
@@ -46,3 +46,4 @@ export * as Formatting from "./typography/formatting";
 export {Heading} from "./typography/heading";
 export * as Modifiers from "./typography/modifiers";
 export {Paragraph} from "./typography/paragraph";
+export * as Quote from "./typography/quote";
