@@ -30,7 +30,8 @@ export * as Omni from "./navigation/omni";
 // export * as Pagination from "./navigation/pagination";
 // export * as Tree from "./navigation/tree";
 
-// export * as Dialog from "./overlays/dialog";
+export * as Backdrop from "./overlays/backdrop";
+export * as Dialog from "./overlays/dialog";
 export * as Popover from "./overlays/popover";
 // export * as Sheet from "./overlays/sheet";
 // export * as Toast from "./overlays/toast";
