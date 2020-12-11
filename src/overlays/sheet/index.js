@@ -1,4 +1,4 @@
-export {default as SheetContainer} from "./SheetContainer.svelte";
-export {default as SheetRegion} from "./SheetRegion.svelte";
+export {default as Container} from "./SheetContainer.svelte";
+export {default as Region} from "./SheetRegion.svelte";
 
-export {default as SheetButton} from "../backdrop/BackdropButton.svelte";
+export {default as Button} from "../backdrop/BackdropButton.svelte";

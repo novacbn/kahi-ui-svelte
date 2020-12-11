@@ -1,7 +1,7 @@
-export {default as DialogContainer} from "./DialogContainer.svelte";
-export {default as DialogRegion} from "./DialogRegion.svelte";
+export {default as Container} from "./DialogContainer.svelte";
+export {default as Region} from "./DialogRegion.svelte";
 
-export {default as DialogButton} from "../backdrop/BackdropButton.svelte";
+export {default as Button} from "../backdrop/BackdropButton.svelte";
 
 export {default as Body} from "./DialogBody.svelte";
 export {default as Heading} from "./DialogHeading.svelte";
