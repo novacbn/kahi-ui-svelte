@@ -86,7 +86,7 @@ Currently the documentation site is under construction. However you can view the
     -   `Backdrop` — **svelte**
     -   `Dialog` — **svelte**
     -   `Popover` — **svelte**
-    -   ~~`Sheet`~~ — **svelte**
+    -   `Sheet` — **svelte**
     -   ~~`Toast`~~ — **svelte**
 
 -   Surfaces

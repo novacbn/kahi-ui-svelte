@@ -12,6 +12,8 @@
 
     export let id = undefined;
 
+    // NOTE: While Backdrop does NOT use these attributes, defining them
+    // here makes it easier for passthrough
     export let palette = undefined;
     export let viewport = undefined;
     export let state = false;
