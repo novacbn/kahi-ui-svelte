@@ -48,3 +48,5 @@ export {Heading} from "./typography/heading";
 export * as Modifiers from "./typography/modifiers";
 export {Paragraph} from "./typography/paragraph";
 export * as Quote from "./typography/quote";
+
+export {Portal} from "./utilities/portal";

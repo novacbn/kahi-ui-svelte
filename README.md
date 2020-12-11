@@ -125,3 +125,7 @@ Currently the documentation site is under construction. However you can view the
         -   `Small` — **svelte**
     -   `Paragraph` — **svelte**
     -   `Quote` — **svelte**
+
+-   Utilities
+
+    -   `Portal` — **svelte**
