@@ -11,9 +11,7 @@ export const DESIGN_ALIGNMENTS = {
 };
 
 export const DESIGN_ANIMATIONS = {
-    await: "await",
     pulse: "pulse",
-    wave: "wave",
 };
 
 export const DESIGN_HEADINGS = {
@@ -23,6 +21,11 @@ export const DESIGN_HEADINGS = {
     four: "4",
     five: "5",
     six: "6",
+};
+
+export const DESIGN_LOADERS = {
+    await: "await",
+    wave: "wave",
 };
 
 export const DESIGN_PALETTES = {

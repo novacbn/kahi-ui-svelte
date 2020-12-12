@@ -1,6 +1,8 @@
-const GLOBAL_DATA_ATTRIBUTES = ["animation", "hidden"].map((attribute, index) => {
-    return [attribute, "data-" + attribute];
-});
+const GLOBAL_DATA_ATTRIBUTES = ["animation", "animation-palette", "hidden"].map(
+    (attribute, index) => {
+        return [attribute, "data-" + attribute];
+    }
+);
 
 const GLOBAL_HTML_ATTRIBUTES = ["class", "id", "style", "tabindex", "title"].map(
     (attribute, index) => {
