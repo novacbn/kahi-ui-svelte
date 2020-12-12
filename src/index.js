@@ -3,7 +3,7 @@ export * from "./util/enumerations";
 export {Badge} from "./components/badge";
 export {Button} from "./components/button";
 export {Divider} from "./components/divider";
-// export * as Loader from "./components/loader";
+export {Loader} from "./components/loader";
 // export * as Placeholder from "./components/placeholder";
 export {Spacer} from "./components/spacer";
 // export * as Tab from "./components/tab";
@@ -13,7 +13,7 @@ export {Spacer} from "./components/spacer";
 // export * as Lists from "./elements/lists";
 // export * as Table from "./elements/table";
 
-// export {Text, TextArea} from "./form/field";
+export {Text, TextArea} from "./form/field";
 // export {Check, Radio, Switch} from "./form/toggle";
 
 export {Container} from "./layout/container";
