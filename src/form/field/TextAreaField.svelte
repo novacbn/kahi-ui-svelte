@@ -6,7 +6,6 @@
     export let readonly = undefined;
 
     export let palette = undefined;
-    export let shape = undefined;
 
     export let value = "";
 </script>
@@ -14,7 +13,6 @@
 <textarea
     {...map_global_attributes($$props)}
     data-palette={palette}
-    data-shape={shape}
     {disabled}
     {placeholder}
     {readonly}
