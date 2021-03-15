@@ -15,7 +15,7 @@
                 );
             }
 
-            target = selector;
+            target = element;
         }
 
         if (prepend) target.prepend(portal);
@@ -23,12 +23,12 @@
     });
 </script>
 
+<div bind:this={portal} class="portal">
+    <slot />
+</div>
+
 <style>
     .portal {
         display: contents;
     }
 </style>
-
-<div bind:this={portal} class="portal">
-    <slot />
-</div>
