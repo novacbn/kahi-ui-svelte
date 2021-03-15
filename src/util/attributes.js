@@ -14,7 +14,7 @@ export function map_attributes(props, set = null, prefix = null) {
         entries = entries.map((entry) => {
             const [attribute, value] = entry;
 
-            return [`data-${attribute}`, value];
+            return [`${prefix}${attribute}`, value];
         });
     }
 
