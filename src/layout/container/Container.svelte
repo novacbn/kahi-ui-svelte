@@ -1,5 +1,5 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     let _class = "";
 
@@ -12,19 +12,28 @@
     export let viewport = undefined;
 </script>
 
-{#if _as === 'article'}
+{#if _as === "article"}
     <article
         {...map_global_attributes($$props)}
         class="container {_class}"
-        data-viewport={viewport}>
+        {...map_data_attributes({viewport})}
+    >
         <slot />
     </article>
-{:else if _as === 'main'}
-    <main {...map_global_attributes($$props)} class="container {_class}" data-viewport={viewport}>
+{:else if _as === "main"}
+    <main
+        {...map_global_attributes($$props)}
+        class="container {_class}"
+        {...map_data_attributes({viewport})}
+    >
         <slot />
     </main>
 {:else}
-    <div {...map_global_attributes($$props)} class="container {_class}" data-viewport={viewport}>
+    <div
+        {...map_global_attributes($$props)}
+        class="container {_class}"
+        {...map_data_attributes({viewport})}
+    >
         <slot />
     </div>
 {/if}

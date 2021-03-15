@@ -1,5 +1,5 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     let _class = "";
 
@@ -18,27 +18,37 @@
     <a
         {...map_global_attributes($$props)}
         class="tile {_class}"
-        data-palette={palette}
         {href}
-        {target}>
+        {target}
+        {...map_data_attributes({palette})}
+    >
         <slot />
     </a>
 {:else if _for}
     {#if _for === true}
-        <label {...map_global_attributes($$props)} class="tile {_class}" data-palette={palette}>
+        <label
+            {...map_global_attributes($$props)}
+            class="tile {_class}"
+            {...map_data_attributes({palette})}
+        >
             <slot />
         </label>
     {:else}
         <label
             {...map_global_attributes($$props)}
             class="tile {_class}"
-            data-palette={palette}
-            for={_for}>
+            for={_for}
+            {...map_data_attributes({palette})}
+        >
             <slot />
         </label>
     {/if}
 {:else}
-    <div {...map_global_attributes($$props)} class="tile {_class}" data-palette={palette}>
+    <div
+        {...map_global_attributes($$props)}
+        class="tile {_class}"
+        {...map_data_attributes({palette})}
+    >
         <slot />
     </div>
 {/if}

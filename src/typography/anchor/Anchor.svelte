@@ -1,11 +1,19 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_aria_attributes, map_global_attributes} from "../../util/attributes";
 
     export let current = undefined;
     export let href = "";
+    export let rel = undefined;
     export let target = undefined;
 </script>
 
-<a {href} {target} aria-current={current} {...map_global_attributes($$props)} on:click>
+<a
+    {...map_global_attributes($$props)}
+    {href}
+    {rel}
+    {target}
+    {...map_aria_attributes({current})}
+    on:click
+>
     <slot />
 </a>

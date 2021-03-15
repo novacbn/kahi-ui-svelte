@@ -1,5 +1,5 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
     import {DESIGN_LOADERS} from "../../util/enumerations";
 
     let _class = "";
@@ -14,18 +14,16 @@
     <div
         {...map_global_attributes($$props)}
         class="loader {_class}"
-        data-palette={palette}
-        data-size={size}
-        data-variation={DESIGN_LOADERS.wave}>
+        {...map_data_attributes({palette, size, variation: DESIGN_LOADERS.wave})}
+    >
         <span /><span /><span /><span /><span />
     </div>
 {:else}
     <div
         {...map_global_attributes($$props)}
         class="loader {_class}"
-        data-palette={palette}
-        data-size={size}
-        data-variation={DESIGN_LOADERS.await}>
+        {...map_data_attributes({palette, size, variation: DESIGN_LOADERS.await})}
+    >
         <span /><span /><span />
         <span /><span />
         <span /><span /><span /><span />

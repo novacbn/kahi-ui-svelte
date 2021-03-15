@@ -1,5 +1,5 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     let _class = "";
 
@@ -12,7 +12,7 @@
 <nav
     {...map_global_attributes($$props)}
     class="omni {_class}"
-    data-palette={palette}
-    data-position={position}>
+    {...map_data_attributes({palette, position})}
+>
     <slot />
 </nav>

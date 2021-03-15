@@ -1,5 +1,5 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     let _class = "";
 
@@ -12,7 +12,7 @@
 <div
     {...map_global_attributes($$props)}
     class="hero {_class}"
-    data-palette={palette}
-    data-size={size}>
+    {...map_data_attributes({palette, size})}
+>
     <slot />
 </div>

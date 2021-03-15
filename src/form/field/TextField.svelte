@@ -1,5 +1,5 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     export let disabled = undefined;
     export let placeholder = undefined;
@@ -14,9 +14,9 @@
 <input
     {...map_global_attributes($$props)}
     type="text"
-    data-palette={palette}
-    data-shape={shape}
     {disabled}
     {placeholder}
     {readonly}
-    bind:value />
+    {...map_data_attributes({palette, shape})}
+    bind:value
+/>

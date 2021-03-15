@@ -1,5 +1,5 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     let _class = "";
 
@@ -16,10 +16,13 @@
 <div
     {...map_global_attributes($$props)}
     class="stack {_class}"
-    data-alignment={alignment}
-    data-alignment-x={$$props['alignment-x']}
-    data-alignment-y={$$props['alignment-y']}
-    data-orientation={orientation}
-    data-spacing={spacing}>
+    {...map_data_attributes({
+        alignment,
+        orientation,
+        spacing,
+        "alignment-x": $$props["alignment-x"],
+        "alignment-y": $$props["alignment-y"],
+    })}
+>
     <slot />
 </div>

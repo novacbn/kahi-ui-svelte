@@ -8,7 +8,7 @@
     import {setContext} from "svelte";
     import {readable, writable} from "svelte/store";
 
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     export let id = undefined;
 
@@ -34,8 +34,8 @@
     {...map_global_attributes($$props)}
     id={undefined}
     role="dialog"
-    data-palette={palette}
-    data-viewport={viewport}>
+    {...map_data_attributes({palette, viewport})}
+>
     <label for={id} />
 
     <slot />

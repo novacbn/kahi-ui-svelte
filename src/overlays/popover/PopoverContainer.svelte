@@ -9,7 +9,7 @@
     import {readable, writable} from "svelte/store";
 
     import {click_outside} from "../../util/actions";
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     let _class = "";
     export let id = undefined;
@@ -39,9 +39,9 @@
     {...map_global_attributes($$props)}
     id={undefined}
     class="popover {_class}"
-    data-position={position}
-    data-sizing={sizing}
-    use:click_outside={on_click_outside}>
+    {...map_data_attributes({position, sizing})}
+    use:click_outside={on_click_outside}
+>
     <input {id} type="checkbox" bind:checked={$store_state} />
 
     <slot />

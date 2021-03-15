@@ -3,7 +3,12 @@
     "description": "Straight-forward Bindings for Kahi UI",
     "author": "novacbn",
     "version": "0.0.1",
-    "main": "src/index.js",
+    "type": "module",
+    "main": "./src/index.js",
+    "svelte": "./src/index.js",
+    "exports": {
+        "import": "./src/index.js"
+    },
     "keywords": [
         "kahi-ui",
         "svelte",

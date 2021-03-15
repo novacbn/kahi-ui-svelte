@@ -1,5 +1,5 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     let _class = "";
 
@@ -19,10 +19,10 @@
     <a
         {...map_global_attributes($$props)}
         class="box {_class}"
-        data-palette={palette}
-        data-variation={variation}
+        {...map_data_attributes({palette, variation})}
         {href}
-        {target}>
+        {target}
+    >
         <slot />
     </a>
 {:else if _for}
@@ -30,8 +30,8 @@
         <label
             {...map_global_attributes($$props)}
             class="box {_class}"
-            data-palette={palette}
-            data-variation={variation}>
+            {...map_data_attributes({palette, variation})}
+        >
             <slot />
         </label>
     {:else}
@@ -39,8 +39,8 @@
             {...map_global_attributes($$props)}
             class="card {_class}"
             for={_for}
-            data-palette={palette}
-            data-variation={variation}>
+            {...map_data_attributes({palette, variation})}
+        >
             <slot />
         </label>
     {/if}
@@ -48,8 +48,8 @@
     <div
         {...map_global_attributes($$props)}
         class="box {_class}"
-        data-palette={palette}
-        data-variation={variation}>
+        {...map_data_attributes({palette, variation})}
+    >
         <slot />
     </div>
 {/if}

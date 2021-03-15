@@ -1,15 +1,14 @@
 <script>
-    import {map_global_attributes} from "../../util/attributes";
+    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
 
     let _class = "";
 
     export {_class as class};
 
-    export let alignment = undefined;
-    let _alignment_x = undefined;
-    let _alignment_y = undefined;
+    // TODO: How to describe dash variables (alignment-x / alignment-y) as exports
+    // while keeping the dashes key names
 
-    export {_alignment_x as alignmentx, _alignment_y as alignmenty};
+    export let alignment = undefined;
 
     export let points = undefined;
     export let spacing = undefined;
@@ -18,10 +17,13 @@
 <div
     {...map_global_attributes($$props)}
     class="grid {_class}"
-    data-alignment={alignment}
-    data-alignment-x={_alignment_x}
-    data-alignment-y={_alignment_y}
-    data-points={points}
-    data-spacing={spacing}>
+    {...map_data_attributes({
+        alignment,
+        points,
+        spacing,
+        "alignment-x": $$props["alignment-x"],
+        "alignment-y": $$props["alignment-y"],
+    })}
+>
     <slot />
 </div>
