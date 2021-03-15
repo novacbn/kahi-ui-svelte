@@ -1,6 +1,7 @@
 <script>
     import {
         map_aria_attributes,
+        map_attributes,
         map_data_attributes,
         map_global_attributes,
     } from "../../util/attributes";
@@ -17,6 +18,7 @@
     export let value = undefined;
 
     export let href = "";
+    export let rel = undefined;
     export let target = undefined;
 
     export let _for = "";
@@ -30,8 +32,7 @@
         role="button"
         {...map_data_attributes({palette, size, variation})}
         {...map_aria_attributes({active, disabled})}
-        {href}
-        {target}
+        {...map_attributes({href, rel, target})}
         on:click
     >
         <slot />
@@ -66,9 +67,7 @@
             type="submit"
             {...map_data_attributes({palette, shape, size, variation})}
             {...map_aria_attributes({pressed: active})}
-            {disabled}
-            {name}
-            {value}
+            {...map_attributes({disabled, name, value})}
             on:click
         />
     {:else}
@@ -77,9 +76,7 @@
             type="button"
             {...map_data_attributes({palette, shape, size, variation})}
             {...map_aria_attributes({pressed: active})}
-            {disabled}
-            {name}
-            {value}
+            {...map_attributes({disabled, name, value})}
             on:click
         />
     {/if}
@@ -88,7 +85,7 @@
         {...map_global_attributes($$props)}
         {...map_data_attributes({palette, shape, size, variation})}
         {...map_aria_attributes({pressed: active})}
-        {disabled}
+        {...map_attributes({disabled})}
         on:click
     >
         <slot />

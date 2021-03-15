@@ -8,6 +8,7 @@
     export let palette = undefined;
 
     export let href = "";
+    export let rel = undefined;
     export let target = undefined;
 
     let _for = undefined;
@@ -18,9 +19,8 @@
     <a
         {...map_global_attributes($$props)}
         class="tile {_class}"
-        {href}
-        {target}
         {...map_data_attributes({palette})}
+        {...map_attributes({href, rel, target})}
     >
         <slot />
     </a>

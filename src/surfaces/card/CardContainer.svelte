@@ -1,5 +1,9 @@
 <script>
-    import {map_data_attributes, map_global_attributes} from "../../util/attributes";
+    import {
+        map_attributes,
+        map_data_attributes,
+        map_global_attributes,
+    } from "../../util/attributes";
 
     let _class = "";
 
@@ -8,6 +12,7 @@
     export let palette = undefined;
 
     export let href = "";
+    export let rel = undefined;
     export let target = undefined;
 
     let _for = "";
@@ -19,8 +24,7 @@
         {...map_global_attributes($$props)}
         class="card {_class}"
         {...map_data_attributes({palette})}
-        {href}
-        {target}
+        {...map_attributes({href, rel, target})}
     >
         <slot />
     </a>

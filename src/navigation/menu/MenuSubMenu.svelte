@@ -21,6 +21,15 @@
     $: store_state.set(state);
 </script>
 
+<li {...map_global_attributes({...$$props, id: undefined})}>
+    {#if id}<input {id} type="checkbox" bind:checked={$store_state} />{/if}
+    <slot name="heading" />
+
+    <ul>
+        <slot />
+    </ul>
+</li>
+
 <style>
     /**
      * HACK: Hackity hackity, this also doesn't work in older Browsers. Hopefully
@@ -31,12 +40,3 @@
         display: contents;
     }
 </style>
-
-<li {...map_global_attributes($$props)} id={undefined}>
-    {#if id}<input {id} type="checkbox" bind:checked={$store_state} />{/if}
-    <slot name="heading" />
-
-    <ul>
-        <slot />
-    </ul>
-</li>

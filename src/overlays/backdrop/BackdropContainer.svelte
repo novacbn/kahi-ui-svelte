@@ -31,8 +31,7 @@
 
 <input {id} class="backdrop" type="checkbox" bind:checked={$store_state} />
 <div
-    {...map_global_attributes($$props)}
-    id={undefined}
+    {...map_global_attributes({...$$props, id: undefined})}
     role="dialog"
     {...map_data_attributes({palette, viewport})}
 >
