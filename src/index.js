@@ -6,6 +6,7 @@ export * from "./util/enumerations";
 export {Badge} from "./components/badge";
 export {Button} from "./components/button";
 export {Divider} from "./components/divider";
+export {Dot} from "./components/dot";
 export {Loader} from "./components/loader";
 // import * as Placeholder from "./components/placeholder";
 export {Spacer} from "./components/spacer";
