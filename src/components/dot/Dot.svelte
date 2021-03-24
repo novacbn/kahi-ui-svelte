@@ -12,6 +12,4 @@
     class="dot {_class}"
     {...map_global_attributes($$props)}
     {...map_data_attributes({palette, position})}
->
-    <slot />
-</span>
+/>
