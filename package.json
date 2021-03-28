@@ -8,7 +8,7 @@
     "svelte": "./src/index.js",
     "exports": {
         "./package.json": "./package.json",
-        ".": "./index.js"
+        ".": "./src/index.js"
     },
     "keywords": [
         "kahi-ui",
