@@ -1,4 +1,4 @@
-const GLOBAL_DATA_ATTRIBUTES = new Set(["animation", "animation-palette", "hidden"]);
+const GLOBAL_DATA_ATTRIBUTES = new Set(["animation", "animation-palette", "hidden", "stretch"]);
 
 const GLOBAL_HTML_ATTRIBUTES = new Set(["class", "id", "style", "tabindex", "title"]);
 
