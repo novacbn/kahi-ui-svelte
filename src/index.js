@@ -17,7 +17,7 @@ export {Spacer} from "./components/spacer";
 // import * as Lists from "./elements/lists";
 // import * as Table from "./elements/table";
 
-export {Text, TextArea} from "./form/field";
+export {Text, TextArea} from "./form/text";
 // export {Check, Radio, Switch} from "./form/toggle";
 
 export {Container} from "./layout/container";
@@ -62,7 +62,6 @@ export const Formatting = _Formatting;
 export {Heading} from "./typography/heading";
 import * as _Modifiers from "./typography/modifiers";
 export const Modifiers = _Modifiers;
-export {Paragraph} from "./typography/paragraph";
 import * as _Quote from "./typography/quote";
 export const Quote = _Quote;
 
