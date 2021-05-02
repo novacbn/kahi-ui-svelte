@@ -15,7 +15,8 @@ export {Spacer} from "./components/spacer";
 // import * as Document from "./elements/document"; ????
 // import * as Embedded from "./elements/embedded";
 // import * as Lists from "./elements/lists";
-// import * as Table from "./elements/table";
+import * as _Table from "./elements/table";
+export const Table = _Table;
 
 export {Text, TextArea} from "./form/text";
 // export {Check, Radio, Switch} from "./form/toggle";
