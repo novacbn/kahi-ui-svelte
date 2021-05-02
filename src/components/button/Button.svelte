@@ -9,14 +9,15 @@
     export let active = undefined;
     export let disabled = undefined;
     export let palette = undefined;
-    export let size = undefined;
     export let shape = undefined;
+    export let size = undefined;
     export let variation = undefined;
 
     export let name = undefined;
     export let type = undefined;
     export let value = undefined;
 
+    export let download = undefined;
     export let href = "";
     export let rel = undefined;
     export let target = undefined;
@@ -32,7 +33,7 @@
         role="button"
         {...map_data_attributes({palette, size, variation})}
         {...map_aria_attributes({active, disabled})}
-        {...map_attributes({href, rel, target})}
+        {...map_attributes({download, href, rel, target})}
         on:click
     >
         <slot />

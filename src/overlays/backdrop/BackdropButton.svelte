@@ -17,6 +17,12 @@
     $: if (store_id) _for = $store_id;
 </script>
 
-<Button id="{$store_id}-button" for={_for} {palette} {size} {variation} on:click>
-    <slot />
-</Button>
+{#if store_id}
+    <Button id="{$store_id}-button" for={_for} {palette} {size} {variation} on:click>
+        <slot />
+    </Button>
+{:else}
+    <Button for={_for} {palette} {size} {variation} on:click>
+        <slot />
+    </Button>
+{/if}

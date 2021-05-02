@@ -29,7 +29,7 @@
     $: store_state.set(state);
 </script>
 
-<input {id} class="backdrop" type="checkbox" bind:checked={$store_state} />
+<input {id} class="backdrop" type="checkbox" bind:checked={state} />
 <div
     {...map_global_attributes({...$$props, id: undefined})}
     role="dialog"
