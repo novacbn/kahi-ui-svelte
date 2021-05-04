@@ -6,11 +6,21 @@
 
     export {_class as class};
 
+    export let captive = false;
     export let palette = undefined;
     export let viewport = undefined;
     export let state = false;
 </script>
 
-<BackdropContainer {...$$props} class="dialog {_class}" {id} {palette} {viewport} bind:state>
+<BackdropContainer
+    {...$$props}
+    class="dialog {_class}"
+    {id}
+    {captive}
+    {palette}
+    {viewport}
+    bind:state
+    on:backgroundclick
+>
     <slot />
 </BackdropContainer>
