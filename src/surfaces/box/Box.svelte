@@ -37,7 +37,7 @@
     {:else}
         <label
             {...map_global_attributes($$props)}
-            class="card {_class}"
+            class="box {_class}"
             for={_for}
             {...map_data_attributes({palette, variation})}
         >
